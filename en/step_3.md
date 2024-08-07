@@ -1,7 +1,26 @@
-## What next?
+## Light an LED with a Button
 
-If you are following the [PathwayName](https://projects.raspberrypi.org/en/raspberrypi/pathway-name) pathway, you can move on to the [ProjectName](https://projects.raspberrypi.org/en/projects/project-name) project. In this project, you will make a (add description here).
+Control an LED using the button.
 
-![ProjectName project](images/projectname-project.png)
++ Connect the long leg of an LED to pin 17 and the short leg to a GND pin.
 
-If you want to have more fun exploring Scratch, then you could try out any of [these projects](https://projects.raspberrypi.org/en/projects?software%5B%5D=scratch&curriculum%5B%5D=%201).
++ Create a new file by clicking **New**.
+
++ Save the new file by clicking **Save**. Save the file as `gpio_control.py`.
+
++ Now write the following code:
+
+    ```python
+    from gpiozero import LED, Button
+    from time import sleep
+
+    led = LED(17)
+    button = Button(2)
+
+    button.wait_for_press()
+    led.on()
+    sleep(3)
+    led.off()
+    ```
+
++ Save and run your program. When you push the button the LED should come on for three seconds.
