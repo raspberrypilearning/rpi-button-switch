@@ -2,13 +2,27 @@
 
 Control an LED using the button.
 
-+ Connect the long leg of an LED to pin 17 and the short leg to a GND pin.
+--- task ---
 
-+ Create a new file by clicking **New**.
+Connect the long leg of an LED to pin 17 and the short leg to a GND pin.
 
-+ Save the new file by clicking **Save**. Save the file as `gpio_control.py`.
+--- /task ---
 
-+ Now write the following code:
+--- task ---
+
+Create a new file by clicking **New**.
+
+--- /task ---
+
+--- task ---
+
+Save the new file by clicking **Save**. Save the file as `gpio_control.py`.
+
+--- /task ---
+
+--- task ---
+
+Now write the following code:
 
     ```python
     from gpiozero import LED, Button
@@ -23,4 +37,14 @@ Control an LED using the button.
     led.off()
     ```
 
-+ Save and run your program. When you push the button the LED should come on for three seconds.
+--- /task ---
+
+--- task ---
+
+Save and run your program. When you push the button the LED should come on for three seconds.
+
+--- /task ---
+
+
+
+
