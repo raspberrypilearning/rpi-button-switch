@@ -6,18 +6,18 @@ With a switch, a single press and release on the button would turn the LED on, a
 
 Modify your code so that it looks like this:
 
-    ```python
-    from gpiozero import LED, Button
-    from time import sleep
+```python
+from gpiozero import LED, Button
+from time import sleep
 
-    led = LED(17)
-    button = Button(2)
+led = LED(17)
+button = Button(2)
 
-    while True:
-        button.wait_for_press()
-        led.toggle()
-        sleep(0.5)
-    ```
+while True:
+    button.wait_for_press()
+    led.toggle()
+    sleep(0.5)
+```
 
 --- /task ---
 
@@ -33,20 +33,29 @@ It would be great if you could make the LED switch on only when the button is be
 
 Modify your code to look like this:
 
-    ```python
-    from gpiozero import LED, Button
-    from signal import pause
+```python
+from gpiozero import LED, Button
+from signal import pause
 
-    led = LED(17)
-    button = Button(2)
+led = LED(17)
+button = Button(2)
 
-    button.when_pressed = led.on
-    button.when_released = led.off
+button.when_pressed = led.on
+button.when_released = led.off
 
-    pause()
-    ```
+pause()
+```
 
 --- /task ---
+
+--- collapse ---
+---
+title: Running as a script
+---
+
+In this code, `pause()` keeps the program running so the button can control the LED. Without `pause()`, the script would end right after setting up, and the button wouldn't work. It essentially tells the program to "wait here" so that it can continue responding to the button events, allowing the LED to turn on or off when the button is pressed or released. While you are working in Thonny, this isn't so important. 
+
+--- /collapse ---
 
 --- task ---
 
