@@ -1,0 +1,19 @@
+title: Buttons
+hero_image: images/banner.png
+description: Connect buttons to your Raspberry Pi projects!
+version: 4
+listed: false
+copyedit: false
+last_tested: "2022-05-19"
+steps:
+  - title: Buttons
+  - title: Using Buttons to get input
+    completion:
+    - engaged
+  - title: Light an LED with a button
+    completion:
+    - internal
+  - title: Making a switch with a button
+  - title: What can you do next?
+    completion:
+    - external
